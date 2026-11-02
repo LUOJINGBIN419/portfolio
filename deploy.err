@@ -1,8 +1,0 @@
-git.exe : To https://github.com/LUOJINGBIN419/portfolio.git
-ËùÔÚÎ»ÖÃ C:\Users\renep\CodeBuddy\20261102105545\portfolio\deploy.ps1:29 ×Ö·û: 1
-+ & $git push -u origin main 2>&1 | Select-Object -Last 6
-+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    + CategoryInfo          : NotSpecified: (To https://gith...9/portfolio.git:String) [], RemoteException
-    + FullyQualifiedErrorId : NativeCommandError
- 
- * [new branch]      main -> main
