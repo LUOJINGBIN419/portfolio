@@ -26,7 +26,7 @@ export default function About() {
             <div className="group relative aspect-[3/4] overflow-hidden border border-white/[0.08] bg-ink-800">
               {/* 头像占位：将图片命名为 public/avatar.png 即可自动替换 */}
               <img
-                src="/avatar.png"
+                src={`${import.meta.env.BASE_URL}avatar.png`}
                 alt="罗景彬"
                 className="absolute inset-0 h-full w-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0"
                 onError={(e) => {

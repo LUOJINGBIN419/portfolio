@@ -32,7 +32,10 @@ function ProjectCard({
             const contain = project.fit === "contain";
             return (
               <img
-                src={project.image ?? `/work/${project.index}.png`}
+                src={
+                  project.image ??
+                  `${import.meta.env.BASE_URL}work/${project.index}.png`
+                }
                 alt={project.title}
                 className={`absolute inset-0 h-full w-full transition-transform duration-[900ms] ease-out group-hover:scale-[1.04] ${
                   contain ? "bg-[#F4F4F1] object-contain" : "object-cover"

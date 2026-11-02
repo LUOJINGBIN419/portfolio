@@ -59,6 +59,10 @@ export type Project = {
   download?: string;
 };
 
+/** 资源统一加 BASE_URL 前缀，保证部署在根路径或子路径（GitHub Pages）下都能解析 */
+const asset = (path: string) =>
+  `${import.meta.env.BASE_URL}${path.replace(/^\//, "")}`;
+
 export const PROJECTS: Project[] = [
   {
     index: "01",
@@ -69,10 +73,10 @@ export const PROJECTS: Project[] = [
     desc: "从标志到应用规范的完整品牌视觉体系，构建统一克制的品牌语言。",
     gradient:
       "radial-gradient(120% 120% at 20% 10%, #2b2f1a 0%, #12140c 45%, #0a0a0c 100%)",
-    image: "/work/01.jpg",
+    image: asset("/work/01.jpg"),
     fit: "contain",
-    href: "/work/rabbit-farm-brand.pdf",
-    download: "/work/rabbit-farm-brand.pptx",
+    href: asset("/work/rabbit-farm-brand.pdf"),
+    download: asset("/work/rabbit-farm-brand.pptx"),
   },
   {
     index: "02",
@@ -93,8 +97,8 @@ export const PROJECTS: Project[] = [
     desc: "融合动态图形与产品包装的视觉叙事，让品牌在空间与时间中延展。",
     gradient:
       "radial-gradient(120% 120% at 30% 85%, #2e1f33 0%, #150f1c 45%, #0a0a0c 100%)",
-    image: "/work/03.jpg",
-    href: "/work/motion-video.mp4",
+    image: asset("/work/03.jpg"),
+    href: asset("/work/motion-video.mp4"),
   },
   {
     index: "04",
@@ -105,8 +109,8 @@ export const PROJECTS: Project[] = [
     desc: "面向新媒体场景的系列视觉输出，兼顾传播效率与视觉品质。",
     gradient:
       "radial-gradient(120% 120% at 75% 80%, #10302e 0%, #0a1615 45%, #0a0a0c 100%)",
-    image: "/work/04.jpg",
-    href: "/work/newmedia-video.mp4",
+    image: asset("/work/04.jpg"),
+    href: asset("/work/newmedia-video.mp4"),
   },
 ];
 

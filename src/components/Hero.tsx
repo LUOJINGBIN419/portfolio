@@ -31,7 +31,7 @@ export default function Hero() {
           {!videoFailed && (
             <video
               className="absolute inset-0 h-full w-full object-cover"
-              src="/hero-bg.mp4"
+              src={`${import.meta.env.BASE_URL}hero-bg.mp4`}
               autoPlay
               muted
               loop
